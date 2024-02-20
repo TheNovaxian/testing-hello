@@ -1,0 +1,267 @@
+
+TO_CHAR(SYSDATE,'DDMMYYYYYEARMONTHDAYHH:MI:SSAM')                               
+--------------------------------------------------------------------------------
+20 02 2024 Twenty Twenty-Four February  Tuesday   11:35:48 Am                   
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row updated.
+
+
+TABLE_NAME                                                                      
+--------------------------------------------------------------------------------
+TERM                                                                            
+COURSE                                                                          
+LOCATION                                                                        
+STUDENT                                                                         
+COURSE_SECTION                                                                  
+ENROLLMENT                                                                      
+
+6 rows selected.
+
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ COURSEID                                  NOT NULL NUMBER
+ COURSENAME                                NOT NULL VARCHAR2(50)
+ CREDITS                                            NUMBER
+
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ TERMID                                    NOT NULL NUMBER
+ STATUS                                             VARCHAR2(10)
+ DESCRIPTION                               NOT NULL VARCHAR2(50)
+
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ LOCID                                     NOT NULL NUMBER
+ BUILDING                                  NOT NULL VARCHAR2(50)
+ ROOM                                               NUMBER
+
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ STUDID                                    NOT NULL NUMBER
+ SNAME                                     NOT NULL VARCHAR2(50)
+ BIRTHDATE                                          DATE
+
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ STUDID                                    NOT NULL NUMBER
+ CSECTIONID                                NOT NULL NUMBER
+ GRADE                                              VARCHAR2(2)
+
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CSECTIONID                                NOT NULL NUMBER
+ MAXCAPACITY                               NOT NULL NUMBER
+ COURSEID                                           NUMBER
+ TERMID                                             NUMBER
+ LOCID                                              NUMBER
+
+
+CONSTRAINT_NAME                                                                 
+--------------------------------------------------------------------------------
+C                                                                               
+-                                                                               
+TABLE_NAME                                                                      
+--------------------------------------------------------------------------------
+COURSE_SECTION_TID_FK                                                           
+R                                                                               
+COURSE_SECTION                                                                  
+                                                                                
+COURSE_SECTION_CID_FK                                                           
+R                                                                               
+COURSE_SECTION                                                                  
+
+CONSTRAINT_NAME                                                                 
+--------------------------------------------------------------------------------
+C                                                                               
+-                                                                               
+TABLE_NAME                                                                      
+--------------------------------------------------------------------------------
+                                                                                
+COURSE_SECTION_LID_FK                                                           
+R                                                                               
+COURSE_SECTION                                                                  
+                                                                                
+ENROLLMENT_SID_FK                                                               
+R                                                                               
+
+CONSTRAINT_NAME                                                                 
+--------------------------------------------------------------------------------
+C                                                                               
+-                                                                               
+TABLE_NAME                                                                      
+--------------------------------------------------------------------------------
+ENROLLMENT                                                                      
+                                                                                
+ENROLLMENT_CSID_FK                                                              
+R                                                                               
+ENROLLMENT                                                                      
+                                                                                
+COURSE_CID_PK                                                                   
+
+CONSTRAINT_NAME                                                                 
+--------------------------------------------------------------------------------
+C                                                                               
+-                                                                               
+TABLE_NAME                                                                      
+--------------------------------------------------------------------------------
+P                                                                               
+COURSE                                                                          
+                                                                                
+TERM_DESCRIPTION_NN                                                             
+C                                                                               
+TERM                                                                            
+                                                                                
+
+CONSTRAINT_NAME                                                                 
+--------------------------------------------------------------------------------
+C                                                                               
+-                                                                               
+TABLE_NAME                                                                      
+--------------------------------------------------------------------------------
+COURSE_COURSENAME_NN                                                            
+C                                                                               
+COURSE                                                                          
+                                                                                
+TERM_STATUS_CK                                                                  
+C                                                                               
+TERM                                                                            
+
+CONSTRAINT_NAME                                                                 
+--------------------------------------------------------------------------------
+C                                                                               
+-                                                                               
+TABLE_NAME                                                                      
+--------------------------------------------------------------------------------
+                                                                                
+TERM_TID_PK                                                                     
+P                                                                               
+TERM                                                                            
+                                                                                
+LOCATION_BUILDING_NN                                                            
+C                                                                               
+
+CONSTRAINT_NAME                                                                 
+--------------------------------------------------------------------------------
+C                                                                               
+-                                                                               
+TABLE_NAME                                                                      
+--------------------------------------------------------------------------------
+LOCATION                                                                        
+                                                                                
+LOCATION_LID_PK                                                                 
+P                                                                               
+LOCATION                                                                        
+                                                                                
+LOCATION_ROOM_UK                                                                
+
+CONSTRAINT_NAME                                                                 
+--------------------------------------------------------------------------------
+C                                                                               
+-                                                                               
+TABLE_NAME                                                                      
+--------------------------------------------------------------------------------
+U                                                                               
+LOCATION                                                                        
+                                                                                
+STUDENT_SNAME_NN                                                                
+C                                                                               
+STUDENT                                                                         
+                                                                                
+
+CONSTRAINT_NAME                                                                 
+--------------------------------------------------------------------------------
+C                                                                               
+-                                                                               
+TABLE_NAME                                                                      
+--------------------------------------------------------------------------------
+STUDENT_SID_PK                                                                  
+P                                                                               
+STUDENT                                                                         
+                                                                                
+COURSE_SECTION_MAXCAPACITY_NN                                                   
+C                                                                               
+COURSE_SECTION                                                                  
+
+CONSTRAINT_NAME                                                                 
+--------------------------------------------------------------------------------
+C                                                                               
+-                                                                               
+TABLE_NAME                                                                      
+--------------------------------------------------------------------------------
+                                                                                
+COURSE_SECTION_CSID_PK                                                          
+P                                                                               
+COURSE_SECTION                                                                  
+                                                                                
+ENROLLMENT_SID_CSID_PK                                                          
+P                                                                               
+
+CONSTRAINT_NAME                                                                 
+--------------------------------------------------------------------------------
+C                                                                               
+-                                                                               
+TABLE_NAME                                                                      
+--------------------------------------------------------------------------------
+ENROLLMENT                                                                      
+                                                                                
+
+18 rows selected.
+
